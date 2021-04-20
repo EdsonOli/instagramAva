@@ -6,7 +6,7 @@ const usuariosController = {
     index: async (request, response) => {
         let usuarios =  await Usuario.findAll();
         
-        return response.json(usuarios);
+        return response.render('usuarios', {listaUsuarios: usuarios});
     },
 
     create: async (req, res) => {
